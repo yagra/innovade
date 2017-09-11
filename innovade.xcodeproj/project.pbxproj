@@ -10,6 +10,10 @@
 		779A7E271F652DB7005ADCF2 /* innovade.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 779A7E1D1F652DB6005ADCF2 /* innovade.framework */; };
 		779A7E2C1F652DB7005ADCF2 /* innovadeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779A7E2B1F652DB7005ADCF2 /* innovadeTests.swift */; };
 		779A7E2E1F652DB7005ADCF2 /* innovade.h in Headers */ = {isa = PBXBuildFile; fileRef = 779A7E201F652DB6005ADCF2 /* innovade.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		779A7E411F652EA5005ADCF2 /* Innovade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779A7E401F652EA5005ADCF2 /* Innovade.swift */; };
+		779A7E431F652EF9005ADCF2 /* InnovadeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779A7E421F652EF9005ADCF2 /* InnovadeView.swift */; };
+		779A7E4F1F653F13005ADCF2 /* InnovadeAnimationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779A7E4E1F653F13005ADCF2 /* InnovadeAnimationType.swift */; };
+		779A7E511F65400F005ADCF2 /* RamenAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779A7E501F65400F005ADCF2 /* RamenAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +33,10 @@
 		779A7E261F652DB7005ADCF2 /* innovadeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = innovadeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		779A7E2B1F652DB7005ADCF2 /* innovadeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = innovadeTests.swift; sourceTree = "<group>"; };
 		779A7E2D1F652DB7005ADCF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		779A7E401F652EA5005ADCF2 /* Innovade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Innovade.swift; sourceTree = "<group>"; };
+		779A7E421F652EF9005ADCF2 /* InnovadeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnovadeView.swift; sourceTree = "<group>"; };
+		779A7E4E1F653F13005ADCF2 /* InnovadeAnimationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnovadeAnimationType.swift; sourceTree = "<group>"; };
+		779A7E501F65400F005ADCF2 /* RamenAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RamenAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +79,11 @@
 		779A7E1F1F652DB6005ADCF2 /* innovade */ = {
 			isa = PBXGroup;
 			children = (
+				779A7E4D1F653EEB005ADCF2 /* animation */,
 				779A7E201F652DB6005ADCF2 /* innovade.h */,
 				779A7E211F652DB6005ADCF2 /* Info.plist */,
+				779A7E401F652EA5005ADCF2 /* Innovade.swift */,
+				779A7E421F652EF9005ADCF2 /* InnovadeView.swift */,
 			);
 			path = innovade;
 			sourceTree = "<group>";
@@ -84,6 +95,15 @@
 				779A7E2D1F652DB7005ADCF2 /* Info.plist */,
 			);
 			path = innovadeTests;
+			sourceTree = "<group>";
+		};
+		779A7E4D1F653EEB005ADCF2 /* animation */ = {
+			isa = PBXGroup;
+			children = (
+				779A7E4E1F653F13005ADCF2 /* InnovadeAnimationType.swift */,
+				779A7E501F65400F005ADCF2 /* RamenAnimation.swift */,
+			);
+			path = animation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +169,7 @@
 					779A7E1C1F652DB6005ADCF2 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 4JH8FU8Y5R;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					779A7E251F652DB7005ADCF2 = {
@@ -198,6 +219,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				779A7E431F652EF9005ADCF2 /* InnovadeView.swift in Sources */,
+				779A7E411F652EA5005ADCF2 /* Innovade.swift in Sources */,
+				779A7E511F65400F005ADCF2 /* RamenAnimation.swift in Sources */,
+				779A7E4F1F653F13005ADCF2 /* InnovadeAnimationType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +349,7 @@
 		779A7E321F652DB7005ADCF2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 4JH8FU8Y5R;
@@ -336,6 +362,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tokyo.yagra.innovade;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -343,6 +370,7 @@
 		779A7E331F652DB7005ADCF2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 4JH8FU8Y5R;
@@ -362,6 +390,7 @@
 		779A7E351F652DB7005ADCF2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 4JH8FU8Y5R;
 				INFOPLIST_FILE = innovadeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -374,6 +403,7 @@
 		779A7E361F652DB7005ADCF2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 4JH8FU8Y5R;
 				INFOPLIST_FILE = innovadeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -402,6 +432,7 @@
 				779A7E331F652DB7005ADCF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		779A7E341F652DB7005ADCF2 /* Build configuration list for PBXNativeTarget "innovadeTests" */ = {
 			isa = XCConfigurationList;
@@ -410,6 +441,7 @@
 				779A7E361F652DB7005ADCF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
