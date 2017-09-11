@@ -18,11 +18,11 @@ class RamenAnimation: InnovadeAnimationType {
         backgroundLayer.cornerRadius = 10.0
         layer.addSublayer(backgroundLayer)
 
-        drawTopLayer(layer: layer, width: size.width)
-        drawBottomLayer(layer: layer, size: size)
+        drawNoodlesLayer(layer: layer, width: size.width)
+        drawBowlLayer(layer: layer, width: size.width)
     }
 
-    private func drawTopLayer(layer: CALayer, width: CGFloat) {
+    private func drawNoodlesLayer(layer: CALayer, width: CGFloat) {
         let height = width / 2
         let frame = CGRect(x: 0, y: width / 2 - height, width: width, height: height)
 
@@ -75,11 +75,10 @@ class RamenAnimation: InnovadeAnimationType {
         layer.addSublayer(topLayer)
     }
 
-    private func drawBottomLayer(layer: CALayer, size: CGSize) {
-        let width = size.width
+    private func drawBowlLayer(layer: CALayer, width: CGFloat) {
         let height = width / 2.4
-        let unitWidth = size.width / 8
-        let frame = CGRect(x: 0, y: size.height - height, width: width, height: height)
+        let unitWidth = width / 8
+        let frame = CGRect(x: 0, y: width - height, width: width, height: height)
 
         let semicircleLayer = CAShapeLayer()
         semicircleLayer.frame = frame

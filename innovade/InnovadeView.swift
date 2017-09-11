@@ -24,6 +24,9 @@ open class InnovadeView: UIView {
     }
 
     public func start() {
+        if isAnimating {
+            return
+        }
         isHidden = false
         isAnimating = true
         layer.speed = 1
@@ -31,6 +34,9 @@ open class InnovadeView: UIView {
     }
 
     public func stop() {
+        if !isAnimating {
+            return
+        }
         isHidden = true
         isAnimating = false
         layer.sublayers?.removeAll()
