@@ -14,6 +14,7 @@
 		779A7E431F652EF9005ADCF2 /* InnovadeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779A7E421F652EF9005ADCF2 /* InnovadeView.swift */; };
 		779A7E4F1F653F13005ADCF2 /* InnovadeAnimationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779A7E4E1F653F13005ADCF2 /* InnovadeAnimationType.swift */; };
 		779A7E511F65400F005ADCF2 /* RamenAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779A7E501F65400F005ADCF2 /* RamenAnimation.swift */; };
+		779A7E581F661D9D005ADCF2 /* DrinkAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779A7E571F661D9D005ADCF2 /* DrinkAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 		779A7E421F652EF9005ADCF2 /* InnovadeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnovadeView.swift; sourceTree = "<group>"; };
 		779A7E4E1F653F13005ADCF2 /* InnovadeAnimationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnovadeAnimationType.swift; sourceTree = "<group>"; };
 		779A7E501F65400F005ADCF2 /* RamenAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RamenAnimation.swift; sourceTree = "<group>"; };
+		779A7E571F661D9D005ADCF2 /* DrinkAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			children = (
 				779A7E4E1F653F13005ADCF2 /* InnovadeAnimationType.swift */,
 				779A7E501F65400F005ADCF2 /* RamenAnimation.swift */,
+				779A7E571F661D9D005ADCF2 /* DrinkAnimation.swift */,
 			);
 			path = animation;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				779A7E431F652EF9005ADCF2 /* InnovadeView.swift in Sources */,
 				779A7E411F652EA5005ADCF2 /* Innovade.swift in Sources */,
 				779A7E511F65400F005ADCF2 /* RamenAnimation.swift in Sources */,
+				779A7E581F661D9D005ADCF2 /* DrinkAnimation.swift in Sources */,
 				779A7E4F1F653F13005ADCF2 /* InnovadeAnimationType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

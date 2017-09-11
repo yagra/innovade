@@ -10,11 +10,14 @@ import Foundation
 
 public enum InnovadeAnimation {
     case Ramen
+    case Drink
 
     func animation() -> InnovadeAnimationType {
         switch self {
         case .Ramen:
             return RamenAnimation()
+        case .Drink:
+            return DrinkAnimation()
         }
     }
 }
