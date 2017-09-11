@@ -25,6 +25,27 @@
 			remoteGlobalIDString = 779A7E1C1F652DB6005ADCF2;
 			remoteInfo = innovade;
 		};
+		77B012831F66346600024F44 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 77B0127D1F66346600024F44 /* innovator.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 77B0124A1F66344700024F44;
+			remoteInfo = innovator;
+		};
+		77B012851F66346600024F44 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 77B0127D1F66346600024F44 /* innovator.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 77B0125E1F66344800024F44;
+			remoteInfo = innovatorTests;
+		};
+		77B012871F66346600024F44 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 77B0127D1F66346600024F44 /* innovator.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 77B012691F66344800024F44;
+			remoteInfo = innovatorUITests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +60,7 @@
 		779A7E4E1F653F13005ADCF2 /* InnovadeAnimationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnovadeAnimationType.swift; sourceTree = "<group>"; };
 		779A7E501F65400F005ADCF2 /* RamenAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RamenAnimation.swift; sourceTree = "<group>"; };
 		779A7E571F661D9D005ADCF2 /* DrinkAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkAnimation.swift; sourceTree = "<group>"; };
+		77B0127D1F66346600024F44 /* innovator.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = innovator.xcodeproj; path = innovator/innovator.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +85,7 @@
 		779A7E131F652DB6005ADCF2 = {
 			isa = PBXGroup;
 			children = (
+				77B0127D1F66346600024F44 /* innovator.xcodeproj */,
 				779A7E1F1F652DB6005ADCF2 /* innovade */,
 				779A7E2A1F652DB7005ADCF2 /* innovadeTests */,
 				779A7E1E1F652DB6005ADCF2 /* Products */,
@@ -107,6 +130,16 @@
 				779A7E571F661D9D005ADCF2 /* DrinkAnimation.swift */,
 			);
 			path = animation;
+			sourceTree = "<group>";
+		};
+		77B0127E1F66346600024F44 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				77B012841F66346600024F44 /* innovator.app */,
+				77B012861F66346600024F44 /* innovatorTests.xctest */,
+				77B012881F66346600024F44 /* innovatorUITests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +225,12 @@
 			mainGroup = 779A7E131F652DB6005ADCF2;
 			productRefGroup = 779A7E1E1F652DB6005ADCF2 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 77B0127E1F66346600024F44 /* Products */;
+					ProjectRef = 77B0127D1F66346600024F44 /* innovator.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				779A7E1C1F652DB6005ADCF2 /* innovade */,
@@ -199,6 +238,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		77B012841F66346600024F44 /* innovator.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = innovator.app;
+			remoteRef = 77B012831F66346600024F44 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		77B012861F66346600024F44 /* innovatorTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = innovatorTests.xctest;
+			remoteRef = 77B012851F66346600024F44 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		77B012881F66346600024F44 /* innovatorUITests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = innovatorUITests.xctest;
+			remoteRef = 77B012871F66346600024F44 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		779A7E1B1F652DB6005ADCF2 /* Resources */ = {
