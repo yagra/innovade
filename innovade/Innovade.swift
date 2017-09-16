@@ -34,3 +34,10 @@ open class Innovade {
         return InnovadeView(frame: animeFrame, animation: type.animation())
     }
 }
+
+extension NSCoding {
+    func $(_ handler: (Self) -> Void) -> Self {
+        handler(self)
+        return self
+    }
+}
