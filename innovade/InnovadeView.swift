@@ -41,4 +41,16 @@ open class InnovadeView: UIView {
         isAnimating = false
         layer.sublayers?.removeAll()
     }
+
+    public func stopWithMessage(displayTime: TimeInterval, text: String,
+                                message: InnovadeMessageType=NormalMessage()) {
+        if !isAnimating {
+            return
+        }
+        layer.sublayers?.removeAll()
+        message.message(layer: layer, size: frame.size, message: text)
+        DispatchQueue.main.asyncAfter(deadline: .now() + displayTime) {
+            self.stop()
+        }
+    }
 }

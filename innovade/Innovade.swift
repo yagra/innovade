@@ -40,6 +40,8 @@ open class InnovadeSettings {
 
     public var BackgroundColor: UIColor = UIColor.white.withAlphaComponent(0.1)
     public var Color: UIColor = UIColor.black.withAlphaComponent(1)
+    public var TextColor: UIColor = UIColor.black
+    public var FontSize: CGFloat = 20.0
 
     private init() {}
 

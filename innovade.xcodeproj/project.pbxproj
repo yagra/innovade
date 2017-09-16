@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77709AFD1F6CD3370074C275 /* InnovadeMessageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77709AFC1F6CD3370074C275 /* InnovadeMessageType.swift */; };
+		77709AFF1F6CD3660074C275 /* NormalMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77709AFE1F6CD3660074C275 /* NormalMessage.swift */; };
 		779A7E271F652DB7005ADCF2 /* innovade.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 779A7E1D1F652DB6005ADCF2 /* innovade.framework */; };
 		779A7E2C1F652DB7005ADCF2 /* innovadeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779A7E2B1F652DB7005ADCF2 /* innovadeTests.swift */; };
 		779A7E2E1F652DB7005ADCF2 /* innovade.h in Headers */ = {isa = PBXBuildFile; fileRef = 779A7E201F652DB6005ADCF2 /* innovade.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -49,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		77709AFC1F6CD3370074C275 /* InnovadeMessageType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnovadeMessageType.swift; sourceTree = "<group>"; };
+		77709AFE1F6CD3660074C275 /* NormalMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalMessage.swift; sourceTree = "<group>"; };
 		779A7E1D1F652DB6005ADCF2 /* innovade.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = innovade.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		779A7E201F652DB6005ADCF2 /* innovade.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = innovade.h; sourceTree = "<group>"; };
 		779A7E211F652DB6005ADCF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -82,6 +86,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		77709AFB1F6CD2E30074C275 /* message */ = {
+			isa = PBXGroup;
+			children = (
+				77709AFC1F6CD3370074C275 /* InnovadeMessageType.swift */,
+				77709AFE1F6CD3660074C275 /* NormalMessage.swift */,
+			);
+			path = message;
+			sourceTree = "<group>";
+		};
 		779A7E131F652DB6005ADCF2 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +117,7 @@
 		779A7E1F1F652DB6005ADCF2 /* innovade */ = {
 			isa = PBXGroup;
 			children = (
+				77709AFB1F6CD2E30074C275 /* message */,
 				779A7E4D1F653EEB005ADCF2 /* animation */,
 				779A7E201F652DB6005ADCF2 /* innovade.h */,
 				779A7E211F652DB6005ADCF2 /* Info.plist */,
@@ -286,9 +300,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				779A7E431F652EF9005ADCF2 /* InnovadeView.swift in Sources */,
+				77709AFD1F6CD3370074C275 /* InnovadeMessageType.swift in Sources */,
 				779A7E411F652EA5005ADCF2 /* Innovade.swift in Sources */,
 				779A7E511F65400F005ADCF2 /* RamenAnimation.swift in Sources */,
 				779A7E581F661D9D005ADCF2 /* DrinkAnimation.swift in Sources */,
+				77709AFF1F6CD3660074C275 /* NormalMessage.swift in Sources */,
 				779A7E4F1F653F13005ADCF2 /* InnovadeAnimationType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

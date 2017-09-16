@@ -36,10 +36,22 @@
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ImW-SQ-fUA">
                                 <rect key="frame" x="27.5" y="30" width="320" height="216"/>
                             </pickerView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wgv-yR-tpg">
+                                <rect key="frame" x="40" y="495" width="295" height="60"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="mYy-7a-sxD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="EUp-5Y-zEy" firstAttribute="top" secondItem="wgv-yR-tpg" secondAttribute="bottom" constant="20" id="Arh-D6-mf8"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EUp-5Y-zEy" secondAttribute="bottom" constant="50" id="ETn-mZ-sC1"/>
+                            <constraint firstAttribute="trailing" secondItem="wgv-yR-tpg" secondAttribute="trailing" constant="40" id="S4H-ru-F25"/>
+                            <constraint firstItem="wgv-yR-tpg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="emy-xo-cfY"/>
                             <constraint firstItem="ImW-SQ-fUA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ifP-Un-l8e"/>
                             <constraint firstItem="ImW-SQ-fUA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="upr-SM-zlf"/>
                             <constraint firstItem="EUp-5Y-zEy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vb3-ey-d5r"/>
@@ -47,10 +59,12 @@
                     </view>
                     <connections>
                         <outlet property="picker" destination="ImW-SQ-fUA" id="bzJ-y4-kgd"/>
+                        <outlet property="textView" destination="wgv-yR-tpg" id="uQG-bS-cCy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="131.78410794602701"/>
         </scene>
     </scenes>
 </document>

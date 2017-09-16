@@ -11,6 +11,8 @@ import innovade
 
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     @IBOutlet weak var picker: UIPickerView!
+    @IBOutlet weak var textView: UITextView!
+
     let items = [InnovadeAnimation.Ramen, InnovadeAnimation.Drink]
     var innovade = Innovade.innovade(.Ramen)
 
@@ -21,12 +23,17 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         _ = InnovadeSettings.sharedSettings.$ {
             $0.BackgroundColor = UIColor.gray.withAlphaComponent(0.5)
             $0.Color = UIColor.white
+            $0.TextColor = UIColor.white
         }
     }
 
     @IBAction func buttonTouchUpInside(_ sender: Any) {
         if innovade.isAnimating {
-            innovade.stop()
+            if (textView.text ?? "").isEmpty {
+                innovade.stop()
+            } else {
+                innovade.stopWithMessage(displayTime: 5, text: textView.text ?? "")
+            }
         } else {
             innovade = Innovade.innovade(items[picker.selectedRow(inComponent: 0)])
             view.addSubview(innovade)
