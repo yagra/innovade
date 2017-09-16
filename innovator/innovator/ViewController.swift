@@ -32,7 +32,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             if (textView.text ?? "").isEmpty {
                 innovade.stop()
             } else {
-                innovade.stopWithMessage(displayTime: 5, text: textView.text ?? "", message: .Success)
+                innovade.stopWithMessage(displayTime: 5, text: textView.text ?? "", message: .Failure)
             }
         } else {
             innovade = Innovade.innovade(items[picker.selectedRow(inComponent: 0)])

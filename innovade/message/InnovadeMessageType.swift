@@ -15,6 +15,7 @@ public protocol InnovadeMessageType {
 public enum InnovadeMessage {
     case Normal
     case Success
+    case Failure
 
     func message() -> InnovadeMessageType {
         switch self {
@@ -22,6 +23,8 @@ public enum InnovadeMessage {
             return NormalMessage()
         case .Success:
             return SuccessMessage()
+        case .Failure:
+            return FailureMessage()
         }
     }
 }
