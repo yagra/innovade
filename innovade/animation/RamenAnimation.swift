@@ -9,11 +9,12 @@
 import Foundation
 
 class RamenAnimation: InnovadeAnimationType {
+    private let settings = InnovadeSettings.sharedSettings
 
     func animate(layer: CALayer, size: CGSize) {
         _ = CALayer().$ {
             $0.frame = CGRect(x: 0, y: 0, width: size.width, height: size.height)
-            $0.backgroundColor = UIColor.lightGray.withAlphaComponent(0.4).cgColor
+            $0.backgroundColor = settings.BackgroundColor.cgColor
             $0.cornerRadius = 10.0
             layer.addSublayer($0)
         }
@@ -29,7 +30,7 @@ class RamenAnimation: InnovadeAnimationType {
         for i in 0...2 {
             _ = CAShapeLayer().$ {
                 $0.frame = frame
-                $0.strokeColor = UIColor.black.cgColor
+                $0.strokeColor = settings.Color.cgColor
                 $0.lineWidth = width / 30
                 let path = UIBezierPath()
                 let x = width * 0.4 + CGFloat(i) * width / 20
@@ -52,7 +53,7 @@ class RamenAnimation: InnovadeAnimationType {
         for i in 0...1 {
             _ = CAShapeLayer().$ {
                 $0.frame = frame
-                $0.strokeColor = UIColor.black.cgColor
+                $0.strokeColor = settings.Color.cgColor
                 $0.lineWidth = width / 30
                 let path = UIBezierPath()
                 path.move(to: CGPoint(x: width * 0.3, y: CGFloat(i) * height / 10))
@@ -83,7 +84,7 @@ class RamenAnimation: InnovadeAnimationType {
 
         _ = CAShapeLayer().$ {
             $0.frame = frame
-            $0.fillColor = UIColor.black.cgColor
+            $0.fillColor = settings.Color.cgColor
             let path = UIBezierPath()
             path.move(to: CGPoint(x: unitWidth, y: 0))
             path.addCurve(to: CGPoint(x: width - unitWidth, y: 0),
@@ -96,7 +97,7 @@ class RamenAnimation: InnovadeAnimationType {
 
         _ = CAShapeLayer().$ {
             $0.frame = frame
-            $0.fillColor = UIColor.black.cgColor
+            $0.fillColor = settings.Color.cgColor
             $0.path = UIBezierPath(rect:CGRect(x: width / 2 - unitWidth, y: height - unitWidth * 1.4,
                                                       width: unitWidth * 2, height: unitWidth)).cgPath
             layer.addSublayer($0)

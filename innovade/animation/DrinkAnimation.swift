@@ -11,11 +11,12 @@ import Foundation
 class DrinkAnimation: InnovadeAnimationType {
     private let duration = CFTimeInterval(5)
     private let keyTimes = [0, 0.1, 0.5, 0.6, 0.8, 0.99, 1] as [NSNumber]
+    private let settings = InnovadeSettings.sharedSettings
 
     func animate(layer: CALayer, size: CGSize) {
         _ = CALayer().$ {
             $0.frame = CGRect(x: 0, y: 0, width: size.width, height: size.height)
-            $0.backgroundColor = UIColor.lightGray.withAlphaComponent(0.4).cgColor
+            $0.backgroundColor = settings.BackgroundColor.cgColor
             $0.cornerRadius = 10.0
             layer.addSublayer($0)
         }
@@ -34,7 +35,7 @@ class DrinkAnimation: InnovadeAnimationType {
             let _ = CAShapeLayer().$ {
                 $0.frame = frame
                 $0.lineWidth = width / 100
-                $0.strokeColor = UIColor.black.cgColor
+                $0.strokeColor = settings.Color.cgColor
                 let path = UIBezierPath()
                 let x = width / 1.8 + CGFloat(i) * width / 80
                 path.move(to: CGPoint(x: x, y: width / 50))
@@ -60,7 +61,7 @@ class DrinkAnimation: InnovadeAnimationType {
         let liquidLayer = CAShapeLayer().$ {
             $0.frame = CGRect(x: 0, y: 0, width: width, height: width)
             $0.lineWidth = width / 100
-            $0.strokeColor = UIColor.black.cgColor
+            $0.strokeColor = settings.Color.cgColor
             let path = UIBezierPath()
             path.move(to: CGPoint(x: width / 3, y: width / 10))
             path.addLine(to: CGPoint(x: width / 3 + width / 5, y: width - glassHeight * 0.25))
@@ -91,8 +92,8 @@ class DrinkAnimation: InnovadeAnimationType {
         let glassLayer = CAShapeLayer().$ {
             $0.frame = frame
             $0.lineWidth = glassWidth / 10
-            $0.strokeColor = UIColor.black.cgColor
-            $0.fillColor = UIColor.clear.cgColor
+            $0.strokeColor = settings.Color.cgColor
+            $0.fillColor = settings.Color.cgColor
             let path = UIBezierPath()
             path.move(to: CGPoint(x: (width - glassWidth) / 2, y: 0))
             path.addLine(to: CGPoint(x: (width - glassWidth) / 2, y: glassHeight))

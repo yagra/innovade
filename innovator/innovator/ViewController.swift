@@ -18,6 +18,10 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         super.viewDidLoad()
         picker.delegate = self
         picker.dataSource = self
+        _ = InnovadeSettings.sharedSettings.$ {
+            $0.BackgroundColor = UIColor.gray.withAlphaComponent(0.5)
+            $0.Color = UIColor.white
+        }
     }
 
     @IBAction func buttonTouchUpInside(_ sender: Any) {

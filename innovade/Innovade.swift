@@ -22,7 +22,6 @@ public enum InnovadeAnimation {
     }
 }
 
-
 open class Innovade {
     public class func innovade(_ type: InnovadeAnimation, frame: CGRect?=nil) -> InnovadeView {
         let animeFrame = frame ?? {
@@ -32,6 +31,21 @@ open class Innovade {
                           width: width, height: width)
         }()
         return InnovadeView(frame: animeFrame, animation: type.animation())
+    }
+}
+
+
+open class InnovadeSettings {
+    public static let sharedSettings = InnovadeSettings()
+
+    public var BackgroundColor: UIColor = UIColor.white.withAlphaComponent(0.1)
+    public var Color: UIColor = UIColor.black.withAlphaComponent(1)
+
+    private init() {}
+
+    public func $(_ handler: (InnovadeSettings) -> Void) -> Self {
+        handler(self)
+        return self
     }
 }
 
