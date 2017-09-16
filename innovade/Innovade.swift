@@ -8,19 +8,6 @@
 
 import Foundation
 
-public enum InnovadeAnimation {
-    case Ramen
-    case Drink
-
-    func animation() -> InnovadeAnimationType {
-        switch self {
-        case .Ramen:
-            return RamenAnimation()
-        case .Drink:
-            return DrinkAnimation()
-        }
-    }
-}
 
 open class Innovade {
     public class func innovade(_ type: InnovadeAnimation, frame: CGRect?=nil) -> InnovadeView {

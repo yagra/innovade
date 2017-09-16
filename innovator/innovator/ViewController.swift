@@ -21,7 +21,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         picker.delegate = self
         picker.dataSource = self
         _ = InnovadeSettings.sharedSettings.$ {
-            $0.BackgroundColor = UIColor.gray.withAlphaComponent(0.5)
+            $0.BackgroundColor = UIColor.darkGray.withAlphaComponent(0.5)
             $0.Color = UIColor.white
             $0.TextColor = UIColor.white
         }
@@ -32,7 +32,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             if (textView.text ?? "").isEmpty {
                 innovade.stop()
             } else {
-                innovade.stopWithMessage(displayTime: 5, text: textView.text ?? "")
+                innovade.stopWithMessage(displayTime: 5, text: textView.text ?? "", message: .Success)
             }
         } else {
             innovade = Innovade.innovade(items[picker.selectedRow(inComponent: 0)])

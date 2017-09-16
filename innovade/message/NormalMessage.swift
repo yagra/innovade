@@ -11,7 +11,7 @@ import Foundation
 class NormalMessage: InnovadeMessageType {
     private let settings = InnovadeSettings.sharedSettings
 
-    func message(layer: CALayer, size: CGSize, message: String) {
+    func show(layer: CALayer, size: CGSize, message: String) {
         _ = CALayer().$ {
             $0.frame = CGRect(x: 0, y: 0, width: size.width, height: size.height)
             $0.backgroundColor = settings.BackgroundColor.cgColor

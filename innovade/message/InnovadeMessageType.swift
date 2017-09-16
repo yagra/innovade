@@ -9,5 +9,19 @@
 import Foundation
 
 public protocol InnovadeMessageType {
-    func message(layer: CALayer, size: CGSize, message: String)
+    func show(layer: CALayer, size: CGSize, message: String)
+}
+
+public enum InnovadeMessage {
+    case Normal
+    case Success
+
+    func message() -> InnovadeMessageType {
+        switch self {
+        case .Normal:
+            return NormalMessage()
+        case .Success:
+            return SuccessMessage()
+        }
+    }
 }
