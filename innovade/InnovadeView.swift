@@ -17,6 +17,7 @@ open class InnovadeView: UIView {
     init(frame: CGRect, animation: InnovadeAnimationType) {
         self.animation = animation
         super.init(frame: frame)
+        isHidden = true
     }
     
     required public init?(coder aDecoder: NSCoder) {
