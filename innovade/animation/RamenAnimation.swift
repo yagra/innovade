@@ -12,7 +12,7 @@ class RamenAnimation: InnovadeAnimationType {
     private let settings = InnovadeSettings.sharedSettings
 
     func animate(layer: CALayer, size: CGSize) {
-        _ = CALayer().$ {
+        _ = CALayer().handle {
             $0.frame = CGRect(x: 0, y: 0, width: size.width, height: size.height)
             $0.backgroundColor = settings.BackgroundColor.cgColor
             $0.cornerRadius = 10.0
@@ -28,7 +28,7 @@ class RamenAnimation: InnovadeAnimationType {
         let topLayer = CALayer()
         topLayer.frame = frame
         for i in 0...2 {
-            _ = CAShapeLayer().$ {
+            _ = CAShapeLayer().handle {
                 $0.frame = frame
                 $0.strokeColor = settings.Color.cgColor
                 $0.lineWidth = width / 30
@@ -51,7 +51,7 @@ class RamenAnimation: InnovadeAnimationType {
             }
         }
         for i in 0...1 {
-            _ = CAShapeLayer().$ {
+            _ = CAShapeLayer().handle {
                 $0.frame = frame
                 $0.strokeColor = settings.Color.cgColor
                 $0.lineWidth = width / 30
@@ -64,7 +64,7 @@ class RamenAnimation: InnovadeAnimationType {
             }
         }
 
-        _ = CAKeyframeAnimation(keyPath: "position.y").$ {
+        _ = CAKeyframeAnimation(keyPath: "position.y").handle {
             $0.duration = 1.0
             $0.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
             $0.keyTimes = [0, 0.5, 1]
@@ -82,7 +82,7 @@ class RamenAnimation: InnovadeAnimationType {
         let unitWidth = width / 8
         let frame = CGRect(x: 0, y: width - height, width: width, height: height)
 
-        _ = CAShapeLayer().$ {
+        _ = CAShapeLayer().handle {
             $0.frame = frame
             $0.fillColor = settings.Color.cgColor
             let path = UIBezierPath()
@@ -95,7 +95,7 @@ class RamenAnimation: InnovadeAnimationType {
             layer.addSublayer($0)
         }
 
-        _ = CAShapeLayer().$ {
+        _ = CAShapeLayer().handle {
             $0.frame = frame
             $0.fillColor = settings.Color.cgColor
             $0.path = UIBezierPath(rect:CGRect(x: width / 2 - unitWidth, y: height - unitWidth * 1.4,

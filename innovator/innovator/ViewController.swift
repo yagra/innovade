@@ -20,7 +20,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         super.viewDidLoad()
         picker.delegate = self
         picker.dataSource = self
-        _ = InnovadeSettings.sharedSettings.$ {
+        _ = InnovadeSettings.sharedSettings.handle {
             $0.BackgroundColor = UIColor.darkGray.withAlphaComponent(0.5)
             $0.Color = UIColor.white
             $0.TextColor = UIColor.white

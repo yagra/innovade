@@ -14,7 +14,7 @@ class DrinkAnimation: InnovadeAnimationType {
     private let settings = InnovadeSettings.sharedSettings
 
     func animate(layer: CALayer, size: CGSize) {
-        _ = CALayer().$ {
+        _ = CALayer().handle {
             $0.frame = CGRect(x: 0, y: 0, width: size.width, height: size.height)
             $0.backgroundColor = settings.BackgroundColor.cgColor
             $0.cornerRadius = 10.0
@@ -32,7 +32,7 @@ class DrinkAnimation: InnovadeAnimationType {
         let frame = CGRect(x: 0, y: 0, width: width, height: width)
 
         for i in 0...4 {
-            let _ = CAShapeLayer().$ {
+            let _ = CAShapeLayer().handle {
                 $0.frame = frame
                 $0.lineWidth = width / 100
                 $0.strokeColor = settings.Color.cgColor
@@ -45,7 +45,7 @@ class DrinkAnimation: InnovadeAnimationType {
             }
         }
 
-        _ = CAKeyframeAnimation(keyPath: "transform.scale.y").$ {
+        _ = CAKeyframeAnimation(keyPath: "transform.scale.y").handle {
             $0.keyTimes = keyTimes
             $0.values = [0.0, 1.0, 0.8, 0.0, 0.0, 0.0, 0.0]
             $0.duration = duration
@@ -58,7 +58,7 @@ class DrinkAnimation: InnovadeAnimationType {
 
     private func drawDrinkLayer(layer: CALayer, width: CGFloat) {
         let glassHeight = width / 2
-        let liquidLayer = CAShapeLayer().$ {
+        let liquidLayer = CAShapeLayer().handle {
             $0.frame = CGRect(x: 0, y: 0, width: width, height: width)
             $0.lineWidth = width / 100
             $0.strokeColor = settings.Color.cgColor
@@ -71,7 +71,7 @@ class DrinkAnimation: InnovadeAnimationType {
             layer.addSublayer($0)
         }
 
-        _ = CAKeyframeAnimation(keyPath: "fillColor").$ {
+        _ = CAKeyframeAnimation(keyPath: "fillColor").handle {
             $0.keyTimes = keyTimes
             let clear = UIColor.clear.cgColor
             let fill = UIColor.black.withAlphaComponent(0.9).cgColor
@@ -89,7 +89,7 @@ class DrinkAnimation: InnovadeAnimationType {
         let glassWidth = width / 3
         let frame = CGRect(x: 0, y: width - glassHeight * 1.2, width: width, height: glassHeight)
 
-        let glassLayer = CAShapeLayer().$ {
+        let glassLayer = CAShapeLayer().handle {
             $0.frame = frame
             $0.lineWidth = glassWidth / 10
             $0.strokeColor = settings.Color.cgColor
@@ -103,20 +103,20 @@ class DrinkAnimation: InnovadeAnimationType {
             layer.addSublayer($0)
         }
 
-        let liquidLayer = CAShapeLayer().$ {
+        let liquidLayer = CAShapeLayer().handle {
             $0.frame = frame
             $0.path = UIBezierPath(rect: CGRect(x: (width - glassWidth) / 2, y: 0,
                                                 width: glassWidth, height: glassHeight)).cgPath
             glassLayer.addSublayer($0)
         }
 
-        let scaleAnimation = CAKeyframeAnimation(keyPath: "transform.scale.y").$ {
+        let scaleAnimation = CAKeyframeAnimation(keyPath: "transform.scale.y").handle {
             $0.values = [0.0, 0.0, 1.0, 1.0, 0.0, 0.0]
         }
-        let positionAnimation = CAKeyframeAnimation(keyPath: "position.y").$ {
+        let positionAnimation = CAKeyframeAnimation(keyPath: "position.y").handle {
             $0.values = [glassHeight, glassHeight, glassHeight / 2, glassHeight / 2, glassHeight, glassHeight]
         }
-        _ = CAAnimationGroup().$ {
+        _ = CAAnimationGroup().handle {
             $0.animations = [scaleAnimation, positionAnimation].map {
                 $0.duration = duration
                 $0.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)

@@ -32,14 +32,14 @@ open class InnovadeSettings {
 
     private init() {}
 
-    public func $(_ handler: (InnovadeSettings) -> Void) -> Self {
+    public func handle(_ handler: (InnovadeSettings) -> Void) -> Self {
         handler(self)
         return self
     }
 }
 
 extension NSCoding {
-    func $(_ handler: (Self) -> Void) -> Self {
+    func handle(_ handler: (Self) -> Void) -> Self {
         handler(self)
         return self
     }

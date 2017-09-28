@@ -13,14 +13,14 @@ class SuccessMessage: InnovadeMessageType {
 
     func show(layer: CALayer, size: CGSize, message: String) {
         let width = size.width
-        _ = CALayer().$ {
+        _ = CALayer().handle {
             $0.frame = CGRect(x: 0, y: 0, width: width, height: size.height)
             $0.backgroundColor = settings.BackgroundColor.cgColor
             $0.cornerRadius = 10.0
             layer.addSublayer($0)
         }
 
-        _ = CAShapeLayer().$ {
+        _ = CAShapeLayer().handle {
             $0.frame = CGRect(x: 0, y: 0, width: width, height: size.height)
             $0.fillColor = settings.Color.cgColor
             $0.path = UIBezierPath(ovalIn:
@@ -43,7 +43,7 @@ class SuccessMessage: InnovadeMessageType {
             layer.addSublayer($0)
         }
 
-        _ = CATextLayer().$ {
+        _ = CATextLayer().handle {
             $0.string = message
             $0.fontSize = settings.FontSize
             $0.foregroundColor = settings.TextColor.cgColor
