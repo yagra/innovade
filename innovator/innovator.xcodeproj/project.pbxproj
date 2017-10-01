@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		777E9BF01F80AA740049575E /* innovade.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 777E9BEC1F80AA0E0049575E /* innovade.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		77B0124E1F66344700024F44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B0124D1F66344700024F44 /* AppDelegate.swift */; };
 		77B012501F66344700024F44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B0124F1F66344700024F44 /* ViewController.swift */; };
 		77B012531F66344700024F44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77B012511F66344700024F44 /* Main.storyboard */; };
@@ -14,7 +15,7 @@
 		77B012581F66344700024F44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77B012561F66344700024F44 /* LaunchScreen.storyboard */; };
 		77B012631F66344800024F44 /* innovatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B012621F66344800024F44 /* innovatorTests.swift */; };
 		77B0126E1F66344800024F44 /* innovatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B0126D1F66344800024F44 /* innovatorUITests.swift */; };
-		77B0128B1F66348100024F44 /* innovade.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B0128A1F66348100024F44 /* innovade.framework */; };
+		77B0128B1F66348100024F44 /* innovade.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B0128A1F66348100024F44 /* innovade.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +35,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		777E9BEF1F80AA6B0049575E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				777E9BF01F80AA740049575E /* innovade.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		777E9BEC1F80AA0E0049575E /* innovade.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = innovade.framework; path = "../../../../Library/Developer/Xcode/DerivedData/innovade-gwjoorfgwltfsaamjebdozejnjzd/Build/Products/Debug-iphoneos/innovade.framework"; sourceTree = "<group>"; };
 		77B0124A1F66344700024F44 /* innovator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = innovator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77B0124D1F66344700024F44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77B0124F1F66344700024F44 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +95,7 @@
 		77B012411F66344700024F44 = {
 			isa = PBXGroup;
 			children = (
+				777E9BEC1F80AA0E0049575E /* innovade.framework */,
 				77B0124C1F66344700024F44 /* innovator */,
 				77B012611F66344800024F44 /* innovatorTests */,
 				77B0126C1F66344800024F44 /* innovatorUITests */,
@@ -147,6 +163,7 @@
 				77B012461F66344700024F44 /* Sources */,
 				77B012471F66344700024F44 /* Frameworks */,
 				77B012481F66344700024F44 /* Resources */,
+				777E9BEF1F80AA6B0049575E /* CopyFiles */,
 			);
 			buildRules = (
 			);
